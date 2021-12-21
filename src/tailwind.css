@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+    .addBtn {
+        @apply bg-customGreen text-customWhite rounded-md py-0.5 px-6 text-xl shadow-customShadow font-bold;
+    }
+    .btn {
+        @apply bg-customGreen text-customWhite rounded-md p-1.5 text-xl shadow-customShadow;
+    }
+}
