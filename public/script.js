@@ -57,17 +57,10 @@ function todoUpdate(event) {
     let input = createInput();
     input.value = parentContainer.children[1].innerHTML.trim();
     parentContainer.children[1].classList.add("hidden");
-
-
     parentContainer.append(input);
-
     parentContainer.children[2].focus();
     input.addEventListener("focusout", function(event) {
         removeInput(parentContainer, input);
-
-        if(input.event==="focusout") {
-            console.log("ASdffd");
-        }
     });
     input.addEventListener("keyup", function(event) {
         if(event.keyCode===13) {
