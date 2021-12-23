@@ -14,7 +14,7 @@
             To-Do List
         </div>
         <div class="grid grid-cols-3 gap-2 py-12">
-            <input type="text" class="rounded-md pl-2 shadow-customShadow w-full mr-1 col-span-2" id="todoInput">
+            <input type="text" class="rounded-md pl-2 shadow-customShadow w-full mr-1 col-span-2 focus:outline focus:outline-customYellow focus:ring focus:ring-customYellow" id="todoInput">
             <button class="addBtn col-span-1" onclick="todoAdd()">
                 Add
             </button>
@@ -25,7 +25,7 @@
             <!-- <li class="grid grid-cols-3 gap-2 my-4">
                 <div class="col-span-2 grid grid-cols-6 items-center">
                     <div class="w-3 h-3 rounded-full my-auto bg-customBlue"></div>
-                    <div class="col-span-5 break-words line-through decoration-4">
+                    <div class="col-span-5 break-words line-through decoration-4" onclick="todoUpdate(event)">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ut itaque possimus sed assumenda ipsa esse, alias optio aperiam, vitae laudantium voluptatem, blanditiis ipsum fuga labore nam deleniti laborum nihil.
                     </div>
                 </div>

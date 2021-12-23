@@ -51,6 +51,37 @@ function todoRemove(event) {
     listElement.parentElement.removeChild(listElement);
 }
 
+//function to update an existing item
+function todoUpdate(event) {
+    let parentContainer = event.target.parentElement;
+    let input = createInput();
+    input.value = parentContainer.children[1].innerHTML.trim();
+    parentContainer.children[1].classList.add("hidden");
+
+
+    parentContainer.append(input);
+
+    parentContainer.children[2].focus();
+    input.addEventListener("focusout", function(event) {
+        removeInput(parentContainer, input);
+
+        if(input.event==="focusout") {
+            console.log("ASdffd");
+        }
+    });
+    input.addEventListener("keyup", function(event) {
+        if(event.keyCode===13) {
+            removeInput(parentContainer, input);
+        }
+    });
+}
+
+//function for replacing the updated value and removing the input element
+function removeInput(parentContainer, input) {
+    parentContainer.children[1].innerHTML = input.value;
+    parentContainer.children[1].classList.remove("hidden");
+    parentContainer.removeChild(parentContainer.children[2]);
+}
 
 //function to get current element
 function getCurrentElement(event) {
@@ -111,6 +142,7 @@ function createChildTextParent(task) {
     let divTask = document.createElement("div");
     divTask.classList.add("col-span-5");
     divTask.classList.add("break-words");
+    divTask.setAttribute("onclick", "todoUpdate(event)");
     divTask.innerHTML = task;
 
     divTaskParent.append(divDisc);
@@ -129,7 +161,7 @@ function createChildButtonParent(flag) {
     div.classList.add("flex");
     div.classList.add("self-start");
     div.classList.add("justify-between");
-    div.classList.add("sm:justify-evenly");
+    div.classList.add("xs:justify-evenly");
     div.classList.add("my-auto");
 
     let removeBtn = createRemoveButton();
@@ -216,4 +248,19 @@ function createPath(event) {
     path.setAttribute("d", event);
     path.setAttribute("id", "path");
     return path;
+}
+
+//function to create an input element for update
+function createInput() {
+    let input = document.createElement("input");
+    input.setAttribute("type", "text");
+    input.classList.add("rounded-md");
+    input.classList.add("bg-customYellow");
+    input.classList.add("focus:outline");
+    input.classList.add("focus:outline-customYellow");
+    input.classList.add("focus:ring");
+    input.classList.add("focus:ring-customYellow");
+    input.classList.add("w-full");
+    input.classList.add("col-span-5");
+    return input;
 }
