@@ -440,9 +440,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100%;
 }
 
-@media (min-width: 360px){
+@media (min-width: 375px){
   .container{
-    max-width: 360px;
+    max-width: 375px;
   }
 }
 
@@ -551,10 +551,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: grid;
 }
 
-.hidden{
-  display: none;
-}
-
 .h-3{
   height: 0.75rem;
 }
@@ -634,11 +630,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(255 17 17 / var(--tw-bg-opacity));
 }
 
-.bg-red-500{
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
-
 .p-12{
   padding: 3rem;
 }
@@ -704,29 +695,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.outline{
-  outline-style: solid;
-}
-
-.outline-2{
-  outline-width: 2px;
-}
-
-.outline-customGreen{
-  outline-color: #11CC11;
-}
-
-.ring{
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-}
-
-.ring-customYellow{
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(254 234 0 / var(--tw-ring-opacity));
-}
-
 .focus\:outline:focus{
   outline-style: solid;
 }
@@ -746,7 +714,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-ring-color: rgb(254 234 0 / var(--tw-ring-opacity));
 }
 
-@media (min-width: 360px){
+@media (min-width: 375px){
   .xs\:max-w-md{
     max-width: 28rem;
   }

@@ -18,7 +18,7 @@ module.exports = {
       }
     },
     screens: {
-      'xs': '360px',...defaultTheme.screens
+      'xs': '375px',...defaultTheme.screens
     }
   },
   plugins: [],
