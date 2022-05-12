@@ -6,7 +6,7 @@ Install the project in your local computer using the following
         Clone this repository in your local PC using the commmand
         <br>
         <code>
-            git clone https://github.com/your-username/Color-Generator
+            git clone https://github.com/your-username/final-to-do-list
         </code>
     </li>
     <li>
