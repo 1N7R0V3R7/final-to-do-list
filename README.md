@@ -10,7 +10,7 @@ Install the project in your local computer using the following
         </code>
     </li>
     <li>
-        cd Color-Generator
+        cd final-to-do-list
     </li>
 </ol>
 
